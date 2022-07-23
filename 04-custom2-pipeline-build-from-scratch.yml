@@ -25,7 +25,7 @@ stages:
             repository: 'custom2aksnginxapp1'
             command: 'buildAndPush'
             Dockerfile: '**/Dockerfile'
-            tags: '$(Build.SourceVersion)'
+            tags: '$(Build.BuildId)'
         - bash: echo Contents in System Default Working Directory; ls -R $(System.DefaultWorkingDirectory)        
         - bash: echo Before copying Contents in Build Artifact Directory; ls -R $(Build.ArtifactStagingDirectory)  
         - task: CopyFiles@2
