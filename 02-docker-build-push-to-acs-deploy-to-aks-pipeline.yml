@@ -52,7 +52,7 @@ stages:
   - deployment: Deploy
     displayName: Deploy
     pool:
-      vmImage: $(vmImageName)
+      name: devopsself
     environment: 'suryakiran349azuredevopsgithubacraksapp1.default'
     strategy:
       runOnce:
